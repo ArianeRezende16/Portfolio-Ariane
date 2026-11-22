@@ -158,3 +158,110 @@ footer {
 .card-tecnologia p:last-child {
     margin-bottom: 0;
 }
+
+/* Galeria de Projetos */
+
+.card-projeto {
+    background-color: white;
+    border: 1px solid #EDE8F4;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(37, 43, 70, 0.08);
+}
+
+.card-projeto h3 {
+    color: #252B46;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.card-projeto p {
+    color: #5C5E70;
+    line-height: 1.7;
+}
+
+
+.imagem-projeto {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    background-color: #EDE8F4;
+}
+
+
+
+
+/* Imagens dos projetos */
+
+.imagem-projeto {
+    width: 100%;
+    height: 380px;
+    object-fit: contain;
+    background-color: #EDE8F4;
+    cursor: zoom-in;
+}
+
+/* Setinhas dos carrosséis pequenos */
+
+.card-projeto .carousel-control-prev,
+.card-projeto .carousel-control-next {
+    width: 42px;
+    height: 42px;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
+    background-color: #252B46;
+    border-radius: 50%;
+    opacity: 0.9;
+}
+
+.card-projeto .carousel-control-prev {
+    left: 10px;
+}
+
+.card-projeto .carousel-control-next {
+    right: 10px;
+}
+
+/* Imagem ampliada */
+
+#imagemAmpliada {
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+/* Janela ampliada */
+
+#modalImagem .modal-content {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#modalImagem .modal-header {
+    background-color: #EDE8F4;
+}
+
+#modalImagem .modal-title {
+    color: #252B46;
+}
+
+/* Ajustes para celular */
+
+@media (max-width: 576px) {
+
+    .imagem-projeto {
+        height: 250px;
+    }
+
+    #modalImagem .modal-body {
+        padding: 10px;
+    }
+
+    #imagemAnterior,
+    #proximaImagem {
+        padding: 6px;
+    }
+
+}
+

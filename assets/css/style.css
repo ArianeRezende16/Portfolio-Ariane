@@ -1,0 +1,160 @@
+
+/* Cores e estilo geral */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FAF8F6;
+    color: #252B46;
+}
+
+/* Menu de navegação */
+
+.navbar-brand {
+    color: #A69BC4;
+    font-weight: bold;
+}
+
+.navbar-brand:hover {
+    color: #252B46;
+}
+
+.nav-link {
+    color: #252B46;
+}
+
+.nav-link:hover {
+    color: #A69BC4;
+}
+
+/* Página inicial */
+
+.inicio {
+    background-color: #EDE8F4;
+    padding: 100px 20px;
+}
+
+.inicio h1 {
+    color: #252B46;
+}
+
+.inicio p {
+    color: #5C5E70;
+}
+
+/* Botões */
+
+.btn-primary {
+    background-color: #A69BC4;
+    border-color: #A69BC4;
+    color: #252B46;
+}
+
+.btn-primary:hover {
+    background-color: #8E80B2;
+    border-color: #8E80B2;
+    color: white;
+}
+
+/* Títulos das seções */
+
+h2 {
+    color: #252B46;
+}
+
+/* Navegação entre seções */
+
+section {
+    scroll-margin-top: 20px;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #252B46;
+    color: white;
+}
+
+/* Seção Sobre mim */
+
+#sobre h3 {
+    color: #A69BC4;
+    font-weight: bold;
+}
+
+#sobre h4 {
+    color: #252B46;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#sobre p {
+    line-height: 1.8;
+}
+
+#sobre li {
+    margin-bottom: 8px;
+}
+
+/* Foto de perfil */
+
+.foto-perfil {
+    width: 260px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 4px solid #EDE8F4;
+}
+
+/* Áreas do Conhecimento */
+
+.card-conhecimento {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #EDE8F4;
+    box-shadow: 0 4px 12px rgba(37, 43, 70, 0.08);
+}
+
+.card-conhecimento h3 {
+    color: #8E80B2;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card-conhecimento p {
+    color: #5C5E70;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* Tendências Tecnológicas */
+
+.card-tecnologia {
+    background-color: #EDE8F4;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #D8CEEA;
+    transition: transform 0.3s;
+}
+
+.card-tecnologia:hover {
+    transform: translateY(-5px);
+}
+
+.card-tecnologia h3 {
+    color: #252B46;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-tecnologia p {
+    color: #5C5E70;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.card-tecnologia p:last-child {
+    margin-bottom: 0;
+}

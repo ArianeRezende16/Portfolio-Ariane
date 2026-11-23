@@ -94,8 +94,6 @@ administrativo não disparam notificações.
 4. Abra o navegador e acesse:
    http://localhost/Portfolio-Ariane/
 
-Não é necessário iniciar o MySQL.
-
 ## Repositório
 
 https://github.com/ArianeRezende16/Portfolio-Ariane

@@ -739,17 +739,257 @@
 </section>
 
 
-        <!-- Contato -->
-        <section id="contato" class="container py-5">
-            <h2>Contato</h2>
-            <p>Entre em contato comigo.</p>
-        </section>
+        
+<!-- FORMULÁRIO DE CONTATO -->
+<section id="contato" class="container py-5">
+
+    <h2 class="text-center mb-3">Entre em Contato</h2>
+
+    <p class="text-center mb-5">
+        Tem alguma dúvida ou gostaria de conversar?
+        Envie uma mensagem pelo formulário abaixo!
+    </p>
+
+    <div class="row justify-content-center">
+
+        <div class="col-12 col-md-8">
+
+            <form id="formContato" class="form-contato">
+
+                <!-- Nome -->
+                <div class="mb-3">
+                    <label for="nome" class="form-label">Nome</label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="nome"
+                        name="nome"
+                        required
+                    >
+                </div>
+
+                <!-- E-mail -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+
+                    <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        name="email"
+                        required
+                    >
+                </div>
+
+                <!-- Assunto -->
+                <div class="mb-3">
+                    <label for="assunto" class="form-label">Assunto</label>
+
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="assunto"
+                        name="assunto"
+                        required
+                    >
+                </div>
+
+                <!-- Mensagem -->
+                <div class="mb-4">
+                    <label for="mensagem" class="form-label">Mensagem</label>
+
+                    <textarea
+                        class="form-control"
+                        id="mensagem"
+                        name="mensagem"
+                        rows="5"
+                        required
+                    ></textarea>
+                </div>
+
+                <!-- Botão de envio -->
+               <button
+    type="submit"
+    class="btn btn-primary w-100"
+    id="botaoEnviar"
+>
+    Enviar mensagem
+</button>
+
+                <!-- Avisos do formulário -->
+                <p
+                    id="statusContato"
+                    class="text-center mt-3"
+                    aria-live="polite"
+                ></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PAINEL ADMINISTRATIVO -->
+<section id="painelAdmin" class="container py-5" hidden>
+
+    <h2 class="text-center mb-3">
+        Painel Administrativo
+    </h2>
+
+    <p class="text-center mb-4">
+        Gerenciamento das mensagens recebidas.
+    </p>
+
+    <button
+        type="button"
+        id="fecharAdmin"
+        class="btn btn-secondary mb-4"
+    >
+        Fechar painel
+    </button>
+
+
+<!-- Botão para cadastrar nova mensagem -->
+<button
+    type="button"
+    id="novoAdmin"
+    class="btn btn-primary mb-4"
+>
+    + Nova mensagem
+</button>
+
+<!-- Formulário de cadastro -->
+<form id="formNovoAdmin" class="bg-light p-4 rounded mb-4" hidden>
+
+    <h3 class="mb-3">Cadastrar mensagem</h3>
+
+    <div class="mb-3">
+        <label for="novoNome" class="form-label">Nome</label>
+        <input type="text" id="novoNome"
+               class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="novoEmail" class="form-label">E-mail</label>
+        <input type="email" id="novoEmail"
+               class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="novoAssunto" class="form-label">Assunto</label>
+        <input type="text" id="novoAssunto"
+               class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="novaMensagem" class="form-label">Mensagem</label>
+        <textarea id="novaMensagem"
+                  class="form-control"
+                  rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Cadastrar
+    </button>
+
+    <button type="button" id="cancelarCadastro"
+            class="btn btn-secondary">
+        Cancelar
+    </button>
+
+</form>
+
+
+<!-- Formulário para editar mensagens -->
+<form id="formEditarAdmin" class="bg-light p-4 rounded mb-4" hidden>
+
+    <h3 class="mb-3">Editar mensagem</h3>
+
+    <div class="mb-3">
+        <label for="adminNome" class="form-label">Nome</label>
+        <input type="text" id="adminNome"
+               class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="adminEmail" class="form-label">E-mail</label>
+        <input type="email" id="adminEmail"
+               class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="adminAssunto" class="form-label">Assunto</label>
+        <input type="text" id="adminAssunto"
+               class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="adminMensagem" class="form-label">Mensagem</label>
+        <textarea id="adminMensagem"
+                  class="form-control"
+                  rows="4" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Salvar alterações
+    </button>
+
+    <button type="button" id="cancelarEdicao"
+            class="btn btn-secondary">
+        Cancelar
+    </button>
+
+</form>
+
+
+    <!-- Tabela de mensagens -->
+    <div class="table-responsive">
+
+        <table class="table table-striped table-bordered">
+
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Assunto</th>
+                    <th>Mensagem</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="tabelaMensagens">
+                <!-- Preenchido pelo JavaScript -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
 
     </main>
 
-    <footer class="text-center py-4">
-        <p class="mb-0">© 2026 Meu Portfólio</p>
-    </footer>
+    
+<footer class="text-center py-4">
+
+    <p class="mb-2">© 2026 Meu Portfólio</p>
+
+    <!-- Acesso discreto ao painel -->
+    <button
+        type="button"
+        id="abrirAdmin"
+        class="btn btn-sm btn-outline-light"
+    >
+        Área administrativa
+    </button>
+
+</footer>
+
 
 <!-- JANELA DE IMAGENS AMPLIADAS -->
 <div
@@ -832,6 +1072,8 @@
 
     <!-- Nosso JavaScript -->
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/contato.js"></script>
+    <script src="assets/js/admin.js"></script>
 
 </body>
 </html>

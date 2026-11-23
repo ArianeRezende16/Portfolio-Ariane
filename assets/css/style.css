@@ -265,3 +265,34 @@ footer {
 
 }
 
+
+/* FORMULÁRIO DE CONTATO */
+
+.form-contato {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid #EDE8F4;
+    box-shadow: 0 4px 12px rgba(37, 43, 70, 0.08);
+}
+
+.form-contato .form-label {
+    color: #252B46;
+    font-weight: bold;
+}
+
+.form-contato .form-control {
+    border: 1px solid #D8CEEA;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.form-contato .form-control:focus {
+    border-color: #A69BC4;
+    box-shadow: 0 0 0 3px #EDE8F4;
+}
+
+.form-contato button {
+    padding: 12px;
+    font-weight: bold;
+}
